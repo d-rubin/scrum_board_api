@@ -41,10 +41,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "todo",
-    "rest_framework"
+    "rest_framework",
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -133,3 +135,5 @@ MEDIA_ROOT = '/home/Wrench3826/scrum_board_api/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/Wrench3826/scrum_board_api/static'
 STATIC_URL = '/static/'
+
+CORS_ORIGIN_ALLOW_ALL = True
